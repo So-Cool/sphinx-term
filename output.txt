@@ -1,0 +1,2 @@
+src/sphinx_term.md:4: [redirected with Found] https://www.sphinx-doc.org/ to https://www.sphinx-doc.org/en/master/
+src/sphinx_term.md:4: [broken] https://pypi.org/project/sphinx-term: 404 Client Error: Not Found for url: https://pypi.org/project/sphinx-term/
