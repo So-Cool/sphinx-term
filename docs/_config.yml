@@ -1,0 +1,55 @@
+title: '<tt>sphinx-term</tt> documentation'
+author: >
+  <a href="mailto:ks1591@my.bristol.ac.uk">Kacper Sokol</a>
+copyright: '2021'
+logo: src/img/computer.svg
+
+exclude_patterns:
+  - .DS_Store
+  - __pycache__
+
+html:
+  favicon: src/img/computer.svg
+  use_edit_page_button: true
+  use_repository_button: true
+  use_issues_button: true
+  extra_footer: >
+    This <a href="https://jupyterbook.org/intro.html">Jupyter Book</a>
+    documents the
+    <a href="https://github.com/So-Cool/sphinx-term"><tt>sphinx-term</tt></a>
+    Sphinx extension.
+    The source of this document is available on
+    <a href="https://github.com/So-Cool/sphinx-term/tree/master/docs">GitHub</a>.
+
+  extra_navbar: ''
+  # google_analytics_id: ''
+  home_page_in_navbar: true
+  baseurl: 'https://so-cool.github.io/sphinx-term/'
+
+parse:
+  myst_enable_extensions:
+    - colon_fence
+    - dollarmath
+    - linkify
+
+repository:
+  url: https://github.com/So-Cool/sphinx-term
+
+sphinx:
+  extra_extensions:
+    - sphinx_term.cssterm
+  config:
+    html_extra_path:
+      - ../README.md
+      - ../LICENCE
+      - .nojekyll
+    numfig_format:
+      figure: 'Figure %s'
+    numfig_secnum_depth: 1
+    # Configure Sphinx-copybutton
+    # <https://sphinx-copybutton.readthedocs.io/en/latest/>
+    copybutton_prompt_text: ''
+    copybutton_only_copy_prompt_lines: false
+    copybutton_remove_prompts: false
+    # Configure Sphinx-term extension
+    sphinx_term_cssterm_dir: src/cssterm_files/

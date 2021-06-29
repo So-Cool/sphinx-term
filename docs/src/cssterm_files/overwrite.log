@@ -1,0 +1,15 @@
+$ pwd
+~/sphinx-term
+$ tree -d .
+.
+├── docs
+│   └── src
+│       ├── cssterm_files
+│       ├── img
+│       └── text
+├── sphinx_term
+│   └── _static
+│       ├── cssterm
+│       │   ├── css
+│       │   └── scripts
+│       └── termynal

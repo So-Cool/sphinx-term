@@ -1,0 +1,7 @@
+format: jb-article
+root: src/sphinx_term
+
+sections:
+- file: src/text/cssterm
+- url: https://github.com/So-Cool/sphinx-term
+  title: 'sphinx-term extension'

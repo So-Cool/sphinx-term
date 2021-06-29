@@ -1,0 +1,7 @@
+include README.md
+include LICENCE
+include sphinx_term/_static/README.md
+include sphinx_term/_static/termynal/termynal.css
+include sphinx_term/_static/termynal/termynal.min.js
+include sphinx_term/_static/cssterm/css/cssterm.css
+include sphinx_term/_static/cssterm/scripts/cssterm.js

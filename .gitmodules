@@ -1,0 +1,6 @@
+[submodule "sphinx_termynal/_static"]
+	path = sphinx_term/_static/termynal
+	url = https://github.com/ines/termynal.git
+[submodule "sphinx_term/_static/cssterm"]
+	path = sphinx_term/_static/cssterm
+	url = https://github.com/nstephens/cssterm.git

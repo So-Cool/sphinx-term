@@ -1,0 +1,11 @@
+# Python
+__pycache__
+*.egg-info
+dist
+build
+
+# Mac OS
+.DS_Store
+
+# Jupyter Book
+docs/_build
