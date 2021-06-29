@@ -130,6 +130,7 @@ class CSSterm(Directive):
             contents = '\n'.join(self.content)
         else:
             localised_directory = sphinx_term.localise_term_directory(
+                env.srcdir,
                 st_term_dir,
                 ('sphinx_term_cssterm_dir', 'cssterm box content'))
             # compose the full path to the code file and ensure it exists

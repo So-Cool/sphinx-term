@@ -91,7 +91,7 @@ def include_static_path(app):
         app.config.html_static_path.append(_STATIC_PATH)
 
 
-def localise_term_directory(st_term_dir, request_type):
+def localise_term_directory(src_dir, st_term_dir, request_type):
     """Localise the terminal directory path."""
     if st_term_dir is None:
         raise RuntimeError('The {} sphinx config value must be set when '
@@ -101,6 +101,8 @@ def localise_term_directory(st_term_dir, request_type):
         localised_directory = '.' + st_term_dir
     else:
         localised_directory = st_term_dir
+    # place it in the Sphinx root
+    localised_directory = os.path.join(src_dir, localised_directory)
     # check whether the directory exists
     if not os.path.exists(localised_directory):
         raise RuntimeError('The {} ({}) does not exist.'.format(
