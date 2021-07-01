@@ -67,7 +67,7 @@ My terminal transcript
 
 Each [cssterm] box can be referenced with its name using the `ref` role,
 e.g., `` {ref}`cssterm:my-id` ``, which produces *terminal box* hyper-link.
-The default hyper-link text can be changed with with the folowing `ref` role
+The default hyper-link text can be changed with with the following `ref` role
 syntax: `` {ref}`custom hyper-link text <cssterm:my-id>` ``.
 See the [MyST Markdown documentation] for more details.
 
@@ -98,7 +98,101 @@ changes and automatically regenerates the affected pages.
 
 ## :keyboard: termynal directive ##
 
-*Work in progress.*
+The [`sphinx_term.termynal`](sphinx_term/termynal.py) module defines the
+`termynal` directive, which is used for building [termynal] terminal windows.
+
+### Usage ###
+
+A *[termynal] box* is included with the `termynal` directive:
+
+````text
+```{termynal} termynal:my-id
+- value: echo "My terminal transcript"
+  type: input
+- My terminal transcript
+```
+````
+
+The content of the directive is a **yml-formatted list** of lines to be
+displayed by the terminal (i.e., the terminal transcript).
+Each element of this list can either be:
+- an **empty** element -- indicating a plain, empty line;
+- a **string** -- specifying a plain line of terminal *output* text; or
+- a **dictionary** -- defining more complex line style.
+
+Each line defined as a *dictionary* supports the following **optional** keys:
+- `value` (default *empty string*) -- the content of the termynal
+  line given as a string;
+- `type` (default *none*) -- the line type where:
+  * `input` indicates that the termynal line is an input,
+  * `progress` creates a progress bar (`value` is not required), and
+  * *empty string* (`''`) or *undefined* to get a plain *output* line --
+    the default behaviour;
+- `prompt` (default `$`) -- a string specifying the prompt style;
+- `progressPercent` (default `100`) -- the maximum percent of the
+  `progress` bar;
+- `progressChar` (default `█`) -- the character used to build the
+  `progress` bar (*see below for more details*);
+- `typeDelay` (default `90`) -- the delay between each typed
+  character given in milliseconds (*see below for more details*); and
+- `cursor` (default `▋`) -- the character used as the cursor
+  (*see below for more details*).
+
+For more information about customising termynal lines refer to the official
+documentation of [termynal lines][termynal-line].
+
+Each [termynal] box can be referenced with its name using the `ref` role,
+e.g., `` {ref}`termynal:my-id` ``, which produces *terminal box* hyper-link.
+The default hyper-link text can be changed with with the following `ref` role
+syntax: `` {ref}`custom hyper-link text <termynal:my-id>` ``.
+See the [MyST Markdown documentation] for more details.
+
+### Configuration parameters ###
+
+The `termynal` extension uses one [Sphinx] configuration parameter:
+
+* `sphinx_term_termynal_dir` (**required** when loading the box content
+  from a file) -- defines the path to a directory holding files with content
+  (terminal transcript) of each terminal box.
+
+### Arguments, parameters and content ###
+
+Each [termynal] box has one **required** argument that specifies
+the *unique* id of this particular terminal block.
+This id **must** start with the `termynal:` prefix.
+The content of a [termynal] box can **either** be provided explicitly within
+the directive, **or** -- when the content is left empty -- it is pulled from a
+terminal transcript file whose name is derived from the terminal box id,
+and which should be located in the directory specified via the
+`sphinx_term_termynal_dir` configuration parameter.
+The terminal transcript file name is expected to be the [termynal] block id
+**without** the `termynal:` prefix and **with** the `.yml` extension.
+For example, for a [termynal] block with `termynal:my_log` id, the terminal
+transcript file should be named `my_code.yml`.
+The `sphinx_term.termynal` [Sphinx] extension *monitors* the code files for
+changes and automatically regenerates the affected pages.
+
+The `termynal` directive takes a number of **optional** parameters
+(see the official documentation of [termynal boxes][termynal-conf] for more
+information):
+- `prefix` (default `ty`) -- the prefix used for data attributes;
+- `startDelay` (default `600`) -- the delay before animation,
+  given in milliseconds;
+- `typeDelay` (default `90`) -- the delay between displaying each typed
+  character, given in milliseconds;
+- `lineDelay` (default `1500`) -- the delay between displaying each line,
+  given in milliseconds;
+- `progressLength` (default `40`) -- the number of characters used when
+  displaying a progress bar;
+- `progressChar` (default `█`) -- the character used for building
+  progress bars;
+- `cursor` (default `▋`) -- the character used for displaying the cursor;
+- `noInit` (default `false`) -- whether to initialise the animation when the
+  termynal window is loaded.
+  When set to `true`, the termynal window can be initialised by explicitly
+  calling `Termynal.init()`; and
+- `lineData` (default `null`) -- the sequence used to dynamically load termynal
+  lines at instantiation.
 
 ---
 
@@ -110,6 +204,9 @@ changes and automatically regenerates the affected pages.
 [jupyter book]: https://jupyterbook.org/
 [termynal]: https://github.com/ines/termynal
 [cssterm]: https://github.com/nstephens/cssterm
+[termynal]: https://github.com/ines/termynal
+[termynal-conf]: https://github.com/ines/termynal#customising-termynal
+[termynal-line]: https://github.com/ines/termynal#prompts-and-animations for description
 [example page]: https://so-cool.github.io/sphinx-term
 [doc]: docs
 [myst markdown]: https://myst-parser.readthedocs.io/

@@ -1,0 +1,663 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>termynal module &#8212; &lt;tt&gt;sphinx-term&lt;/tt&gt; documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cssterm.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/termynal.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Mono" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://so-cool.github.io/sphinx-term/src/text/termynal.html" />
+    <link rel="shortcut icon" href="../../_static/computer.svg"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="cssterm module" href="cssterm.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/computer.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title"><tt>sphinx-term</tt> documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sphinx_term.html">
+   Using sphinx-term
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="cssterm.html">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     cssterm
+    </span>
+   </code>
+   module
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     termynal
+    </span>
+   </code>
+   module
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/So-Cool/sphinx-term">
+   sphinx-term extension
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/src/text/termynal.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/So-Cool/sphinx-term"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/So-Cool/sphinx-term/issues/new?title=Issue%20on%20page%20%2Fsrc/text/termynal.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/So-Cool/sphinx-term/edit/master/src/text/termynal.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simple-terminal-window">
+   Simple terminal window
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#terminal-content-structure">
+   Terminal content structure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configuring-terminal-window">
+   Configuring terminal window
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#loading-terminal-window-from-file">
+   Loading terminal window from file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencing-terminal-window">
+   Referencing terminal window
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="termynal-module">
+<span id="sec-termynal"></span><h1><code class="docutils literal notranslate"><span class="pre">termynal</span></code> module<a class="headerlink" href="#termynal-module" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">sphinx_term.termynal</span></code> <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a> extension implements the <code class="docutils literal notranslate"><span class="pre">termynal</span></code>
+directive, which builds <a class="reference external" href="https://github.com/ines/termynal">termynal</a> terminal windows.
+In this section we discuss various aspects of this directive in the context
+of <a class="reference external" href="https://jupyterbook.org/">Jupyter Book</a>.
+Instructions on how to install and enable the extension are provided
+<a class="reference internal" href="../sphinx_term.html#sec-sphinx-term"><span class="std std-ref">here</span></a>.
+A technical documentation of this extension can be found in the <a class="reference external" href="https://github.com/So-Cool/sphinx-term#readme">README</a> file
+of the <a class="reference external" href="https://github.com/So-Cool/sphinx-term">so-cool/sphinx-term</a> GitHub repository.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Each example of the <code class="docutils literal notranslate"><span class="pre">termynal</span></code> embedded on this page is displayed along
+the raw Markdown source used to generate it.
+To switch between the two views use the tabs – <em>Outcome</em> and <em>Syntax</em> –
+visible above each terminal window.</p>
+</div>
+<div class="section" id="simple-terminal-window">
+<h2>Simple terminal window<a class="headerlink" href="#simple-terminal-window" title="Permalink to this headline">¶</a></h2>
+<p>Basic <a class="reference external" href="https://github.com/ines/termynal">termynal</a> windows are embedded with the <code class="docutils literal notranslate"><span class="pre">termynal</span></code> directive like so:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="4e5ddb8b-f4a7-4021-a5f1-4186ad044eab" name="1a14d979-1f1d-477d-af42-70a6e0488e16" type="radio">
+</input><label class="tabbed-label" for="4e5ddb8b-f4a7-4021-a5f1-4186ad044eab">
+Outcome</label><div class="tabbed-content docutils">
+<div data-termynal="" data-ty-linedelay="700" data-ty-typedelay="40" id="termynal-example">
+<span data-ty="input">pip install spacy</span>
+<span data-ty="progress"></span>
+<span data-ty="">Successfully installed spacy</span>
+<span data-ty=""></span>
+<span data-ty="input">python -m spacy download en</span>
+<span data-ty="progress"></span>
+<span data-ty="">Installed model 'en'</span>
+<span data-ty=""></span>
+<span data-ty="input">python</span>
+<span data-ty="input" data-ty-prompt="&gt;&gt;&gt;">import spacy</span>
+<span data-ty="input" data-ty-prompt="&gt;&gt;&gt;">nlp = spacy.load('en')</span>
+<span data-ty="input" data-ty-prompt="&gt;&gt;&gt;">doc = nlp(u'Hello world')</span>
+<span data-ty="input" data-ty-prompt="&gt;&gt;&gt;">print([(w.text, w.pos_) for w in doc])</span>
+<span data-ty="">[('Hello', 'INTJ'), ('world', 'NOUN')]</span>
+
+</div>
+</div>
+<input id="6e0d3c7e-6bd5-4b2e-bd9a-682c81a75da6" name="1a14d979-1f1d-477d-af42-70a6e0488e16" type="radio">
+</input><label class="tabbed-label" for="6e0d3c7e-6bd5-4b2e-bd9a-682c81a75da6">
+Syntax</label><div class="tabbed-content docutils">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{termynal} termynal:example
+---
+typeDelay: 40
+lineDelay: 700
+---
+- value: pip install spacy
+  type: input
+- type: progress
+- Successfully installed spacy
+-
+- value: python -m spacy download en
+  type: input
+- type: progress
+- Installed model &#39;en&#39;
+-
+- value: python
+  type: input
+- value: import spacy
+  type: input
+  prompt: &#39;&gt;&gt;&gt;&#39;
+- value: nlp = spacy.load(&#39;en&#39;)
+  type: input
+  prompt: &#39;&gt;&gt;&gt;&#39;
+- value: doc = nlp(u&#39;Hello world&#39;)
+  type: input
+  prompt: &#39;&gt;&gt;&gt;&#39;
+- value: print([(w.text, w.pos_) for w in doc])
+  type: input
+  prompt: &#39;&gt;&gt;&gt;&#39;
+- &quot;[(&#39;Hello&#39;, &#39;INTJ&#39;), (&#39;world&#39;, &#39;NOUN&#39;)]&quot;
+```
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can restart the animation by clicking the button below.
+If the termynal window is reset while it is still being rendered,
+the animation will break.</p>
+<p><button type="button"
+        class="btn btn-primary"
+        onclick="new Termynal('#termynal-example')">Restart animation</button></p>
+</div>
+<p>This approach requires you to list the terminal output directly within the
+<code class="docutils literal notranslate"><span class="pre">termynal</span></code> directive.
+Additionally, each <a class="reference external" href="https://github.com/ines/termynal">termynal</a> window <strong>needs</strong> to be tagged with an id
+prefixed with <code class="docutils literal notranslate"><span class="pre">termynal:</span></code>, e.g., <code class="docutils literal notranslate"><span class="pre">termynal:example</span></code> for the
+<a class="reference internal" href="#termynal-example"><span class="std std-ref">terminal box above</span></a>.</p>
+</div>
+<div class="section" id="terminal-content-structure">
+<h2>Terminal content structure<a class="headerlink" href="#terminal-content-structure" title="Permalink to this headline">¶</a></h2>
+<p>The content of the <code class="docutils literal notranslate"><span class="pre">termynal</span></code> directive is a <strong>yml-formatted list</strong> of lines
+to be displayed by the terminal (i.e., the terminal transcript).
+Each element of this list can either be:</p>
+<ul class="simple">
+<li><p>an <strong>empty</strong> element – indicating a plain, empty line;</p></li>
+<li><p>a <strong>string</strong> – specifying a plain line of terminal <em>output</em> text; or</p></li>
+<li><p>a <strong>dictionary</strong> – defining more complex line style.</p></li>
+</ul>
+<p>Each line defined as a <em>dictionary</em> supports the following <strong>optional</strong> keys:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (default <em>empty string</em>) – the content of the termynal
+line given as a string;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (default <em>none</em>) – the line type where:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">input</span></code> indicates that the termynal line is an input,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">progress</span></code> creates a progress bar (<code class="docutils literal notranslate"><span class="pre">value</span></code> is not required), and</p></li>
+<li><p><em>empty string</em> (<code class="docutils literal notranslate"><span class="pre">''</span></code>) or <em>undefined</em> to get a plain <em>output</em> line –
+the default behaviour;</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prompt</span></code> (default <code class="docutils literal notranslate"><span class="pre">$</span></code>) – a string specifying the prompt style;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">progressPercent</span></code> (default <code class="docutils literal notranslate"><span class="pre">100</span></code>) – the maximum percent of the
+<code class="docutils literal notranslate"><span class="pre">progress</span></code> bar;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">progressChar</span></code> (default <code class="docutils literal notranslate"><span class="pre">█</span></code>) – the character used to build the
+<code class="docutils literal notranslate"><span class="pre">progress</span></code> bar (<em>see below for more details</em>);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">typeDelay</span></code> (default <code class="docutils literal notranslate"><span class="pre">90</span></code>) – the delay between each typed
+character given in milliseconds (<em>see below for more details</em>); and</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cursor</span></code> (default <code class="docutils literal notranslate"><span class="pre">▋</span></code>) – the character used as the cursor
+(<em>see below for more details</em>).</p></li>
+</ul>
+<p>For more information about customising termynal lines refer to the official
+documentation of <a class="reference external" href="https://github.com/ines/termynal#prompts-and-animations">termynal lines</a>.</p>
+</div>
+<div class="section" id="configuring-terminal-window">
+<h2>Configuring terminal window<a class="headerlink" href="#configuring-terminal-window" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">termynal</span></code> directive takes a number of <strong>optional</strong> parameters outlined in
+the table below.
+(See the official documentation of <a class="reference external" href="https://github.com/ines/termynal#customising-termynal">termynal boxes</a> for more
+information.)</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Default</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ty</span></code></p></td>
+<td><p>The prefix used for data attributes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">startDelay</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">600</span></code></p></td>
+<td><p>The delay before animation, given in milliseconds.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">typeDelay</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">90</span></code></p></td>
+<td><p>The delay between displaying each typed character, given in milliseconds.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">lineDelay</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1500</span></code></p></td>
+<td><p>The delay between displaying each line, given in milliseconds.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">progressLength</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">40</span></code></p></td>
+<td><p>The number of characters used when displaying a progress bar.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">progressChar</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">█</span></code></p></td>
+<td><p>The character used for building progress bars.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">cursor</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">▋</span></code></p></td>
+<td><p>The character used for displaying the cursor.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">noInit</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">false</span></code></p></td>
+<td><p>Whether to initialise the animation when the termynal window is loaded. When set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the termynal window can be initialised by explicitly calling <code class="docutils literal notranslate"><span class="pre">Termynal.init()</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">lineData</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">null</span></code></p></td>
+<td><p>The sequence used to dynamically load termynal lines at instantiation.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="loading-terminal-window-from-file">
+<h2>Loading terminal window from file<a class="headerlink" href="#loading-terminal-window-from-file" title="Permalink to this headline">¶</a></h2>
+<p>Alternatively, the <a class="reference external" href="https://github.com/ines/termynal">termynal</a> box can load its content from a file.
+To this end, the <a class="reference external" href="https://github.com/So-Cool/sphinx-term/blob/master/docs/_config.yml#L57"><code class="docutils literal notranslate"><span class="pre">sphinx_term_termynal_dir</span></code></a> <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a> configuration parameter
+must point to a directory holding a collection of terminal content files.
+These files must have <code class="docutils literal notranslate"><span class="pre">.yml</span></code> extension – see <a class="reference external" href="https://github.com/So-Cool/sphinx-term/tree/master/docs/src/termynal_files">this directory</a> for an example.
+Then, a <code class="docutils literal notranslate"><span class="pre">.yml</span></code> file is loaded into a <a class="reference external" href="https://github.com/ines/termynal">termynal</a> window with a specially
+formatted tag: the base name of the file prepended with the <code class="docutils literal notranslate"><span class="pre">termynal:</span></code> prefix
+and without the <code class="docutils literal notranslate"><span class="pre">.yml</span></code> extension.
+For example, for the <a class="reference external" href="https://github.com/So-Cool/sphinx-term/blob/master/docs/src/termynal_files/example2.yml"><code class="docutils literal notranslate"><span class="pre">example2.yml</span></code></a> file, the corresponding <a class="reference external" href="https://github.com/ines/termynal">termynal</a> box
+is created like so:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="b4f0be36-66d6-4fd0-b8d8-c3913a9c964e" name="47be29c6-4d15-4630-a0ea-9ade33ec7433" type="radio">
+</input><label class="tabbed-label" for="b4f0be36-66d6-4fd0-b8d8-c3913a9c964e">
+Outcome</label><div class="tabbed-content docutils">
+<div data-termynal="" data-ty-linedelay="700" data-ty-typedelay="40" id="termynal-example2">
+<span data-ty="input" data-ty-prompt="▲">npm uninstall react</span>
+<span data-ty="">Are you sure you want to uninstall 'react'?</span>
+<span data-ty="input" data-ty-prompt="(y/n)" data-ty-typedelay="1000">y</span>
+<span data-ty="progress" data-ty-progresschar="·"></span>
+<span data-ty="">Uninstalled 'react'</span>
+<span data-ty="input" data-ty-prompt="▲">node</span>
+<span data-ty="input" data-ty-prompt="&gt;">Array(5).fill('🦄')</span>
+<span data-ty="">['🦄', '🦄', '🦄', '🦄', '🦄']</span>
+<span data-ty="input" data-ty-prompt="▲">cd ~/repos</span>
+<span data-ty="input" data-ty-prompt="▲ ~/repos">git checkout branch master</span>
+<span data-ty="input" data-ty-prompt="▲ ~/repos (master)">git commit -m &quot;Fix things&quot;</span>
+
+</div>
+</div>
+<input id="46c1710b-7a6c-4016-bb3a-94937867b9ec" name="47be29c6-4d15-4630-a0ea-9ade33ec7433" type="radio">
+</input><label class="tabbed-label" for="46c1710b-7a6c-4016-bb3a-94937867b9ec">
+Syntax</label><div class="tabbed-content docutils">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{termynal} termynal:example2
+---
+typeDelay: 40
+lineDelay: 700
+---
+```
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can restart the animation by clicking the button below.
+If the termynal window is reset while it is still being rendered,
+the animation will break.</p>
+<p><button type="button"
+        class="btn btn-primary"
+        onclick="new Termynal('#termynal-example2')">Restart animation</button></p>
+</div>
+<p>Note that if both the terminal file exists and the terminal content is provided
+directly within the <code class="docutils literal notranslate"><span class="pre">termynal</span></code> directive, the latter takes precedence.
+For example, for the <a class="reference external" href="https://github.com/So-Cool/sphinx-term/blob/master/docs/src/termynal_files/example3.yml"><code class="docutils literal notranslate"><span class="pre">example3.yml</span></code></a> file, the content of the terminal box
+tagged with <code class="docutils literal notranslate"><span class="pre">termynal:example3</span></code> will display the explicitly listed code
+instead of loading its content from the <a class="reference external" href="https://github.com/So-Cool/sphinx-term/blob/master/docs/src/termynal_files/example3.yml"><code class="docutils literal notranslate"><span class="pre">example3.yml</span></code></a> file like so:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="1e246ef8-4726-4ee5-8805-c1ee6981f92d" name="4cc837f6-e429-4fcf-88ec-f00315e3dd6d" type="radio">
+</input><label class="tabbed-label" for="1e246ef8-4726-4ee5-8805-c1ee6981f92d">
+Outcome</label><div class="tabbed-content docutils">
+<div data-termynal="" data-ty-linedelay="700" data-ty-typedelay="40" id="termynal-example3">
+<span data-ty="input" data-ty-prompt="▲">npm uninstall react</span>
+<span data-ty="">Are you sure you want to uninstall 'react'?</span>
+<span data-ty="input" data-ty-prompt="(y/n)" data-ty-typedelay="1000">y</span>
+<span data-ty="progress" data-ty-progresschar="·"></span>
+<span data-ty="">Uninstalled 'react'</span>
+<span data-ty="input" data-ty-prompt="▲">node</span>
+<span data-ty="input" data-ty-prompt="&gt;">Array(5).fill('🌈')</span>
+<span data-ty="">['🌈', '🌈', '🌈', '🌈', '🌈']</span>
+<span data-ty="input" data-ty-prompt="▲">cd ~/repos</span>
+<span data-ty="input" data-ty-prompt="▲ ~/repos">git checkout branch master</span>
+<span data-ty="input" data-ty-prompt="▲ ~/repos (master)">git commit -m &quot;Fix things&quot;</span>
+
+</div>
+</div>
+<input id="fe05d066-ac41-4b64-8da2-409d063c7a72" name="4cc837f6-e429-4fcf-88ec-f00315e3dd6d" type="radio">
+</input><label class="tabbed-label" for="fe05d066-ac41-4b64-8da2-409d063c7a72">
+Syntax</label><div class="tabbed-content docutils">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{termynal} termynal:example3
+---
+typeDelay: 40
+lineDelay: 700
+---
+- value: npm uninstall react
+  type: input
+  prompt: ▲
+- Are you sure you want to uninstall &#39;react&#39;?
+- value: y
+  type: input
+  prompt: (y/n)
+  typeDelay: 1000
+- type: progress
+  progressChar: &#39;·&#39;
+- Uninstalled &#39;react&#39;
+- value: node
+  type: input
+  prompt: ▲
+- value: Array(5).fill(&#39;🌈&#39;)
+  type: input
+  prompt: &#39;&gt;&#39;
+- &quot;[&#39;🌈&#39;, &#39;🌈&#39;, &#39;🌈&#39;, &#39;🌈&#39;, &#39;🌈&#39;]&quot;
+- value: cd ~/repos
+  type: input
+  prompt: ▲
+- value: git checkout branch master
+  type: input
+  prompt: ▲ ~/repos
+- value: git commit -m &quot;Fix things&quot;
+  type: input
+  prompt: ▲ ~/repos (master)
+```
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can restart the animation by clicking the button below.
+If the termynal window is reset while it is still being rendered,
+the animation will break.</p>
+<p><button type="button"
+        class="btn btn-primary"
+        onclick="new Termynal('#termynal-example3')">Restart animation</button></p>
+</div>
+</div>
+<div class="section" id="referencing-terminal-window">
+<h2>Referencing terminal window<a class="headerlink" href="#referencing-terminal-window" title="Permalink to this headline">¶</a></h2>
+<p>Finally, each terminal window can be hyper-linked using the MyST Markdown
+<a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/syntax.html#targets-and-cross-referencing"><code class="docutils literal notranslate"><span class="pre">ref</span></code> role</a>.
+To reference a <a class="reference external" href="https://github.com/ines/termynal">termynal</a> terminal box with the standard “<em>terminal box</em>”
+hyper-link use the <code class="docutils literal notranslate"><span class="pre">{ref}`termynal:tag`</span></code> syntax, where <code class="docutils literal notranslate"><span class="pre">termynal:tag</span></code> is
+the tag of the destination terminal window.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<p class="card-text">E.g., see this <a class="reference internal" href="#termynal-example"><span class="std std-ref">terminal box</span></a>.</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>E.g., see this {ref}`termynal:example`.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>The hyper-link text can also be personalised with the
+<code class="docutils literal notranslate"><span class="pre">{ref}`custom</span> <span class="pre">hyper-link</span> <span class="pre">text</span> <span class="pre">&lt;termynal:tag&gt;`</span></code> syntax.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<p class="card-text">E.g., see this <a class="reference internal" href="#termynal-example"><span class="std std-ref">awesome termynal log</span></a>.</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>E.g., see this {ref}`awesome termynal log &lt;termynal:example&gt;`.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./src/text"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+    <script src="../../_static/termynal.js" data-termynal-container="#termynal-example|#termynal-example2|#termynal-example3"></script>
+
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="cssterm.html" title="previous page"><code class="docutils literal notranslate"><span class="pre">cssterm</span></code> module</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By <a href="mailto:ks1591@my.bristol.ac.uk">Kacper Sokol</a>
+<br/>
+        
+            &copy; Copyright 2021.<br/>
+          <div class="extra_footer">
+            This <a href="https://jupyterbook.org/intro.html">Jupyter Book</a> documents the <a href="https://github.com/So-Cool/sphinx-term"><tt>sphinx-term</tt></a> Sphinx extension. The source of this document is available on <a href="https://github.com/So-Cool/sphinx-term/tree/master/docs">GitHub</a>.
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

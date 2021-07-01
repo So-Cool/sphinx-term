@@ -1,1 +1,4 @@
+src/sphinx_term.md:42: [broken] https://github.com/So-Cool/sphinx-term/blob/master/docs/_config.yml#L38-L41: Anchor 'L38-L41' not found
+src/text/termynal.md:137: [broken] https://github.com/ines/termynal#prompts-and-animations: Anchor 'prompts-and-animations' not found
+src/text/termynal.md:142: [broken] https://github.com/ines/termynal#customising-termynal: Anchor 'customising-termynal' not found
 src/sphinx_term.md:4: [redirected with Found] https://www.sphinx-doc.org/ to https://www.sphinx-doc.org/en/master/

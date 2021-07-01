@@ -55,6 +55,7 @@
     <link rel="shortcut icon" href="../../_static/computer.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="termynal module" href="termynal.html" />
     <link rel="prev" title="Using sphinx-term" href="../sphinx_term.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -98,6 +99,16 @@
    <code class="docutils literal notranslate">
     <span class="pre">
      cssterm
+    </span>
+   </code>
+   module
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="termynal.html">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     termynal
     </span>
    </code>
    module
@@ -240,8 +251,8 @@ visible above each terminal window.</p>
 <h2>Simple terminal window<a class="headerlink" href="#simple-terminal-window" title="Permalink to this headline">¶</a></h2>
 <p>Basic <a class="reference external" href="https://github.com/nstephens/cssterm">cssterm</a> windows are embedded with the <code class="docutils literal notranslate"><span class="pre">cssterm</span></code> directive like so:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="83005663-e5c2-44d7-ae79-d3b4db09b2ba" name="96f0b1e8-4019-4c46-b692-8e31821712b8" type="radio">
-</input><label class="tabbed-label" for="83005663-e5c2-44d7-ae79-d3b4db09b2ba">
+<input checked="checked" id="65d3bc1d-f763-45d1-9ddd-dcb775ffc33f" name="3e25e84d-df90-4b58-83d3-3c9d094a36a0" type="radio">
+</input><label class="tabbed-label" for="65d3bc1d-f763-45d1-9ddd-dcb775ffc33f">
 Outcome</label><div class="tabbed-content docutils">
 <div id="cssterm-local">
 <div class="cssterm" id="cssterm-local-box">
@@ -257,8 +268,8 @@ Darwin MacBook-Pro 19.6.0 Darwin Kernel Version 19.6.0: Thu May  6 00:48:39 PDT 
 - IOAudioDevice[&lt;ptr&gt;]::audioEngineStarting() - numRunningAudioEngines = 1</div>
 </div>
 </div>
-<input id="95eca6ab-15e5-4a0f-9b23-cf74da3bfe82" name="96f0b1e8-4019-4c46-b692-8e31821712b8" type="radio">
-</input><label class="tabbed-label" for="95eca6ab-15e5-4a0f-9b23-cf74da3bfe82">
+<input id="9c83d507-2f96-403f-92cc-8a52e4bdd2d7" name="3e25e84d-df90-4b58-83d3-3c9d094a36a0" type="radio">
+</input><label class="tabbed-label" for="9c83d507-2f96-403f-92cc-8a52e4bdd2d7">
 Syntax</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{cssterm} cssterm:local
 $ uname -a
@@ -278,14 +289,14 @@ Darwin MacBook-Pro 19.6.0 Darwin Kernel Version 19.6.0: Thu May  6 00:48:39 PDT 
 </div>
 <p>This approach requires you to list the terminal output directly within the
 <code class="docutils literal notranslate"><span class="pre">cssterm</span></code> directive.
-Additionally, each <a class="reference external" href="https://github.com/nstephens/cssterm">cssterm</a> window needs to be tagged with with an id prefixed
+Additionally, each <a class="reference external" href="https://github.com/nstephens/cssterm">cssterm</a> window needs to be tagged with an id prefixed
 with <code class="docutils literal notranslate"><span class="pre">cssterm:</span></code>, e.g., <code class="docutils literal notranslate"><span class="pre">cssterm:local</span></code> for the
 <a class="reference internal" href="#cssterm-local"><span class="std std-ref">terminal box above</span></a>.</p>
 </div>
 <div class="section" id="loading-terminal-window-from-file">
 <h2>Loading terminal window from file<a class="headerlink" href="#loading-terminal-window-from-file" title="Permalink to this headline">¶</a></h2>
 <p>Alternatively, the <a class="reference external" href="https://github.com/nstephens/cssterm">cssterm</a> box can load its content from a file.
-To this end, the <a class="reference external" href="https://github.com/So-Cool/sphinx-term/blob/master/docs/_config.yml#L55"><code class="docutils literal notranslate"><span class="pre">sphinx_term_cssterm_dir</span></code></a> <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a> configuration parameter
+To this end, the <a class="reference external" href="https://github.com/So-Cool/sphinx-term/blob/master/docs/_config.yml#L56"><code class="docutils literal notranslate"><span class="pre">sphinx_term_cssterm_dir</span></code></a> <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a> configuration parameter
 must point to a directory holding a collection of terminal content files.
 These files must have <code class="docutils literal notranslate"><span class="pre">.log</span></code> extensions – see <a class="reference external" href="https://github.com/So-Cool/sphinx-term/tree/master/docs/src/cssterm_files">this directory</a> for an example.
 Then, a <code class="docutils literal notranslate"><span class="pre">.log</span></code> file is loaded into a <a class="reference external" href="https://github.com/nstephens/cssterm">cssterm</a> window with a specially
@@ -294,8 +305,8 @@ and without the <code class="docutils literal notranslate"><span class="pre">.lo
 For example, for the <a class="reference external" href="https://github.com/So-Cool/sphinx-term/blob/master/docs/src/cssterm_files/demo.log"><code class="docutils literal notranslate"><span class="pre">demo.log</span></code></a> file, the corresponding <a class="reference external" href="https://github.com/nstephens/cssterm">cssterm</a> box is
 created like so:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="d276c7bf-ea7d-4ace-aa21-2a61578d96f1" name="e3a81679-edcd-495a-8335-1cdc60c825ba" type="radio">
-</input><label class="tabbed-label" for="d276c7bf-ea7d-4ace-aa21-2a61578d96f1">
+<input checked="checked" id="61b38a3b-9f65-46fd-957f-ab9d561b4cfd" name="b6ee7d59-e28a-49a6-8631-0c34b8b7844f" type="radio">
+</input><label class="tabbed-label" for="61b38a3b-9f65-46fd-957f-ab9d561b4cfd">
 Outcome</label><div class="tabbed-content docutils">
 <div id="cssterm-demo">
 <div class="cssterm" id="cssterm-demo-box">
@@ -342,8 +353,8 @@ This filesystem will be automatically checked every 20 mounts or
 180 days, whichever comes first.  Use tune2fs -c or -i to override.</div>
 </div>
 </div>
-<input id="38b1f3d2-09b9-4dfd-b97a-7dc7908bc36d" name="e3a81679-edcd-495a-8335-1cdc60c825ba" type="radio">
-</input><label class="tabbed-label" for="38b1f3d2-09b9-4dfd-b97a-7dc7908bc36d">
+<input id="96c88376-d78b-4645-824d-9624b051865f" name="b6ee7d59-e28a-49a6-8631-0c34b8b7844f" type="radio">
+</input><label class="tabbed-label" for="96c88376-d78b-4645-824d-9624b051865f">
 Syntax</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{cssterm} cssterm:demo
 ```
@@ -357,8 +368,8 @@ For example, for the <a class="reference external" href="https://github.com/So-C
 tagged with <code class="docutils literal notranslate"><span class="pre">cssterm:overwrite</span></code> will display the explicitly listed code instead
 of loading its content from the <a class="reference external" href="https://github.com/So-Cool/sphinx-term/blob/master/docs/src/cssterm_files/overwrite.log"><code class="docutils literal notranslate"><span class="pre">overwrite.log</span></code></a> file like so:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="1926a164-3cde-427d-bcac-3da74548f49c" name="c3835f7a-7498-4877-9db8-bd4c5460d611" type="radio">
-</input><label class="tabbed-label" for="1926a164-3cde-427d-bcac-3da74548f49c">
+<input checked="checked" id="d539dde6-6c52-44bd-91dd-1ce6b7ee9388" name="a55b0ffc-ba41-4ddf-aa31-1247aab486d5" type="radio">
+</input><label class="tabbed-label" for="d539dde6-6c52-44bd-91dd-1ce6b7ee9388">
 Outcome</label><div class="tabbed-content docutils">
 <div id="cssterm-overwrite">
 <div class="cssterm" id="cssterm-overwrite-box">
@@ -377,8 +388,8 @@ $ tree -d .
 │       └── termynal</div>
 </div>
 </div>
-<input id="7b3212a9-1dc8-451c-8f5f-4d5d2fef3e5b" name="c3835f7a-7498-4877-9db8-bd4c5460d611" type="radio">
-</input><label class="tabbed-label" for="7b3212a9-1dc8-451c-8f5f-4d5d2fef3e5b">
+<input id="f72bcf76-8af3-4993-b1bc-c0c997f72732" name="a55b0ffc-ba41-4ddf-aa31-1247aab486d5" type="radio">
+</input><label class="tabbed-label" for="f72bcf76-8af3-4993-b1bc-c0c997f72732">
 Syntax</label><div class="tabbed-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>```{cssterm} cssterm:overwrite
 $ tree -d .
@@ -478,6 +489,7 @@ tag of the destination terminal window.</p>
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="../sphinx_term.html" title="previous page">Using sphinx-term</a>
+    <a class='right-next' id="next-link" href="termynal.html" title="next page"><code class="docutils literal notranslate"><span class="pre">termynal</span></code> module</a>
 
         </div>
         
