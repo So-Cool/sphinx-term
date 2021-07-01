@@ -55,7 +55,7 @@ Darwin MacBook-Pro 19.6.0 Darwin Kernel Version 19.6.0: Thu May  6 00:48:39 PDT 
 
 This approach requires you to list the terminal output directly within the
 `cssterm` directive.
-Additionally, each [cssterm] window needs to be tagged with with an id prefixed
+Additionally, each [cssterm] window needs to be tagged with an id prefixed
 with `cssterm:`, e.g., `cssterm:local` for the
 {ref}`terminal box above <cssterm:local>`.
 
@@ -162,7 +162,7 @@ E.g., see this {ref}`awesome terminal log <cssterm:local>`.
 [readme]: https://github.com/So-Cool/sphinx-term#readme
 [so-cool/sphinx-term]: https://github.com/So-Cool/sphinx-term
 [this directory]: https://github.com/So-Cool/sphinx-term/tree/master/docs/src/cssterm_files
-[`sphinx_term_cssterm_dir`]: https://github.com/So-Cool/sphinx-term/blob/master/docs/_config.yml#L55
+[`sphinx_term_cssterm_dir`]: https://github.com/So-Cool/sphinx-term/blob/master/docs/_config.yml#L56
 [`demo.log`]: https://github.com/So-Cool/sphinx-term/blob/master/docs/src/cssterm_files/demo.log
 [`ref` role]: https://myst-parser.readthedocs.io/en/latest/syntax/syntax.html#targets-and-cross-referencing
 [`overwrite.log`]: https://github.com/So-Cool/sphinx-term/blob/master/docs/src/cssterm_files/overwrite.log

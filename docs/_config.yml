@@ -38,6 +38,7 @@ repository:
 sphinx:
   extra_extensions:
     - sphinx_term.cssterm
+    - sphinx_term.termynal
   config:
     html_extra_path:
       - ../README.md
@@ -53,3 +54,4 @@ sphinx:
     copybutton_remove_prompts: false
     # Configure Sphinx-term extension
     sphinx_term_cssterm_dir: src/cssterm_files/
+    sphinx_term_termynal_dir: src/termynal_files/

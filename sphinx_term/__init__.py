@@ -9,7 +9,7 @@ This extension is compatible with, and intended for, Jupyter Book.
 
 import os
 
-VERSION = '0.0'
+VERSION = '0.1'
 __version__ = VERSION
 
 _STATIC_PATH = os.path.join(os.path.dirname(__file__), '_static')

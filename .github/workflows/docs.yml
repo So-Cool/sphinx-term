@@ -1,5 +1,8 @@
 name: Build 🔧 the Jupyter Book 📖 and deploy 🚀 it to GitHub Pages
-on: push
+on:
+  push:
+    branches:
+      - master
 jobs:
   build-n-deploy:
     name: Build and deploy

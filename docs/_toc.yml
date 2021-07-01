@@ -3,5 +3,6 @@ root: src/sphinx_term
 
 sections:
 - file: src/text/cssterm
+- file: src/text/termynal
 - url: https://github.com/So-Cool/sphinx-term
   title: 'sphinx-term extension'

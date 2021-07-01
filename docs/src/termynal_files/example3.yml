@@ -1,0 +1,27 @@
+- value: npm uninstall react
+  type: input
+  prompt: ▲
+- value: Are you sure you want to uninstall 'react'?
+- value: y
+  type: input
+  prompt: (y/n)
+  typeDelay: 1000
+- type: progress
+  progressChar: '·'
+- value: Uninstalled 'react'
+- value: node
+  type: input
+  prompt: ▲
+- value: Array(5).fill('🦄')
+  type: input
+  prompt: '>'
+- value: "['🦄', '🦄', '🦄', '🦄', '🦄']"
+- value: cd ~/repos
+  type: input
+  prompt: ▲
+- value: git checkout branch master
+  type: input
+  prompt: ▲ ~/repos
+- value: git commit -m "Fix things"
+  type: input
+  prompt: ▲ ~/repos (master)

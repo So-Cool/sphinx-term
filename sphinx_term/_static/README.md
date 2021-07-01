@@ -7,7 +7,7 @@ git submodules.
 The [`sphinx-term.termynal`] Python module requires the following CSS and JS
 files distributed as part of the [termynal] package:
 - `termynal.css` and
-- `termynal.min.js`.
+- `termynal.js`.
 
 [termynal] is distributed under the **MIT** license.
 

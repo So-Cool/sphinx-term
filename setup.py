@@ -20,7 +20,7 @@ VERSION = sphinx_term.__version__
 URL = 'https://github.com/So-Cool/{}'.format(DISTNAME)
 DOWNLOAD_URL = 'https://pypi.org/project/{}/#files'.format(DISTNAME)
 PYTHON_REQUIRES = '~=3.5'  # Python 3.5 and up but not yet Python 4
-INSTALL_REQUIRES = ['docutils', 'sphinx>=3']
+INSTALL_REQUIRES = ['docutils', 'sphinx>=3', 'yaml']
 PACKAGES = find_packages(exclude=['*.tests', '*.tests.*', 'tests.*', 'tests'])
 INCLUDE_PACKAGE_DATA = True
 ZIP_SAFE = False  # We are using static files

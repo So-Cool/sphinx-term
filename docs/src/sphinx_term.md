@@ -49,4 +49,4 @@ See the [`_config.yml`] file of this documentation for reference.
 [termynal]: https://github.com/ines/termynal
 [cssterm]: https://github.com/nstephens/cssterm
 [`README.md`]: https://github.com/So-Cool/sphinx-term#readme
-[`_config.yml`]: https://github.com/So-Cool/sphinx-term/blob/master/docs/_config.yml#L38
+[`_config.yml`]: https://github.com/So-Cool/sphinx-term/blob/master/docs/_config.yml#L38-L41
